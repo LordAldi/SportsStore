@@ -11,7 +11,7 @@ namespace SportsStore.Models
 {
     public class SeedData
     {
-        public static void EnsurePopulate(IApplicationBuilder app)
+        public static void EnsurePopulated(IApplicationBuilder app)
         {
             StoreDbContext context = app.ApplicationServices
                 .CreateScope().ServiceProvider.GetRequiredService<StoreDbContext>();
@@ -91,9 +91,5 @@ namespace SportsStore.Models
             }
         }
 
-        internal static void EnsurePopulated(IApplicationBuilder app)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
